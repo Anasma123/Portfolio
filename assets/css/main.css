@@ -1332,3 +1332,48 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+
+
+
+
+
+
+
+/* Container for the slideshow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Hide all images by default */
+.slide {
+  display: none;
+}
+
+/* Style for navigation arrows */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+  transform: translateY(-50%);
+}
