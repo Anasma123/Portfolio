@@ -9,6 +9,52 @@
 (function() {
   "use strict";
 
+
+
+
+let slideIndex = 0;
+
+function showSlides() {
+  let slides = document.getElementsByClassName("slide");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  // Hide all slides
+  }
+
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;  // Reset the slideIndex to loop back
+  }
+
+  slides[slideIndex - 1].style.display = "block";  // Show current slide
+  setTimeout(showSlides, 5000);  // Change image every 5 seconds
+}
+
+// Function to move slides based on button click
+function moveSlide(n) {
+  slideIndex += n;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  if (slideIndex < 1) {
+    slideIndex = slides.length;
+  }
+  showSlides();
+}
+
+// Initialize the slideshow
+showSlides();
+
+
+
+
+
+
+
+
+
+
+  
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
