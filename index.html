@@ -175,21 +175,24 @@
           </div>
 
           <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6">
-                <div class="row gy-4">
-                  <div class="col-lg-12">
-                    <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
-                  </div>
-                  <div class="col-lg-12">
-                    <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div class="slideshow-container">
+    <!-- Slides -->
+    <div class="slide fade">
+      <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="slide fade">
+      <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
+    </div>
+    <div class="slide fade">
+      <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+  <a class="next" onclick="moveSlide(1)">&#10095;</a>
+</div>
+
 
           </div>
 
