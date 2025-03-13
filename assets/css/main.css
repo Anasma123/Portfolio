@@ -759,6 +759,13 @@ section,
     font-size: 36px;
   }
 
+  @media (min-width: 397px) {
+  .sitename .logo h1 {
+    font-size: 25px;
+  }
+}
+
+
   .hero .btn-get-started,
   .hero .btn-watch-video {
     font-size: 14px;
