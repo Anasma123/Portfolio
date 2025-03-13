@@ -22,6 +22,42 @@
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
+
+
+
+
+
+
+// Initialize Swiper
+var swiper = new Swiper('.swiper-container', {
+  loop: true, // Enables infinite looping
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true, // Allows clicking on pagination to navigate
+  },
+  navigation: {
+    nextEl: '.swiper-button-next', // Next button
+    prevEl: '.swiper-button-prev', // Previous button
+  },
+  autoplay: {
+    delay: 3000, // Auto-play every 3 seconds
+    disableOnInteraction: false, // Continue autoplay after user interaction
+  },
+  effect: 'slide', // You can change this to 'fade', 'cube', 'coverflow', etc.
+  speed: 1000, // Animation speed in milliseconds
+});
+
+
+
+
+
+
+
+
+
+
+
+  
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
