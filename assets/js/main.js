@@ -28,25 +28,21 @@
 
 
 
-// Initialize Swiper
-var swiper = new Swiper('.swiper-container', {
-  loop: true, // Enables infinite looping
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true, // Allows clicking on pagination to navigate
-  },
-  navigation: {
-    nextEl: '.swiper-button-next', // Next button
-    prevEl: '.swiper-button-prev', // Previous button
-  },
-  autoplay: {
-    delay: 3000, // Auto-play every 3 seconds
-    disableOnInteraction: false, // Continue autoplay after user interaction
-  },
-  effect: 'slide', // You can change this to 'fade', 'cube', 'coverflow', etc.
-  speed: 1000, // Animation speed in milliseconds
+
+
+
+
+// Initialize the carousel with autoplay
+var myCarousel = document.querySelector('#carouselExampleIndicators');
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 3000, // Auto-play every 3 seconds
+  wrap: true, // Enables infinite looping
 });
 
+
+
+
+  
 
 
 
