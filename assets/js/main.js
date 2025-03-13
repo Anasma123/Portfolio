@@ -32,41 +32,10 @@
 
 
 
-/* Ensure all carousel images have the same size */
-.carousel-item img {
-  width: 100%;
-  height: 400px; /* Adjust this value to match the height of the second image */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-}
-
-/* Custom Slide Animation */
-.carousel-item {
-  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
-}
-
-/* Fade Effect */
-.carousel-item.active {
-  opacity: 1;
-}
-
-.carousel-item-next,
-.carousel-item-prev {
-  opacity: 0;
-  transform: translateX(0);
-}
-
-.carousel-item-next.carousel-item-start,
-.carousel-item-prev.carousel-item-end {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* Optional: Add a shadow effect to the carousel */
-.carousel {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-  overflow: hidden;
-}
+// Initialize Swiper with effects
+var swiper = new Swiper('.swiper-container', {
+  loop: true, // Enables infinite looping
+  effect: 'fade', // Use 'f
 
 
   
