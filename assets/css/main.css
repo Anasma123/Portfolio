@@ -40,6 +40,35 @@
   object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
+/* Custom Slide Animation */
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Fade Effect */
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Add a shadow effect to the carousel */
+.carousel {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 
 
 
