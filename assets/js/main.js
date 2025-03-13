@@ -32,11 +32,22 @@
 
 
 
-// Initialize Swiper with effects
-var swiper = new Swiper('.swiper-container', {
-  loop: true, // Enables infinite looping
-  effect: 'fade', // Use 'f
+// Initialize the carousel with autoplay and custom options
+var myCarousel = document.querySelector('#carouselExampleIndicators');
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 3000, // Auto-play every 3 seconds
+  wrap: true, // Enables infinite looping
+  pause: false, // Disable pause on hover
+});
 
+// Optional: Add event listeners for custom behavior
+myCarousel.addEventListener('slide.bs.carousel', function (event) {
+  console.log('Slide transition started');
+});
+
+myCarousel.addEventListener('slid.bs.carousel', function (event) {
+  console.log('Slide transition completed');
+});
 
   
 
