@@ -31,77 +31,42 @@
 
 
 
-var swiper = new Swiper('.swiper-container', {
-  effect: 'fade', // Fade effect
-  loop: true, // Infinite looping
-  autoplay: {
-    delay: 3000, // Auto-play every 3 seconds
-    disableOnInteraction: false, // Continue autoplay after user interaction
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
 
-  var swiper = new Swiper('.swiper-container', {
-  effect: 'cube', // Cube effect
-  grabCursor: true, // Show grab cursor
-  loop: true, // Infinite looping
-  autoplay: {
-    delay: 3000, // Auto-play every 3 seconds
-    disableOnInteraction: false,
-  },
-  cubeEffect: {
-    shadow: true, // Enable shadow
-    slideShadows: true, // Slide shadows
-    shadowOffset: 20, // Shadow offset
-    shadowScale: 0.94, // Shadow scale
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-  var swiper = new Swiper('.swiper-container', {
-  effect: 'coverflow', // Coverflow effect
-  grabCursor: true, // Show grab cursor
-  centeredSlides: true, // Center slides
-  loop: true, // Infinite looping
-  autoplay: {
-    delay: 3000, // Auto-play every 3 seconds
-    disableOnInteraction: false,
-  },
-  coverflowEffect: {
-    rotate: 50, // Rotate slides
-    stretch: 0, // Stretch slides
-    depth: 100, // Depth of slides
-    modifier: 1, // Effect modifier
-    slideShadows: true, // Enable slide shadows
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-  var swiper = new Swiper('.swiper-container', {
-  effect: 'flip', // Flip effect
-  grabCursor: true, // Show grab cursor
-  loop: true, // Infinite looping
-  autoplay: {
-    delay:
+/* Ensure all carousel images have the same size */
+.carousel-item img {
+  width: 100%;
+  height: 400px; /* Adjust this value to match the height of the second image */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Custom Slide Animation */
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Fade Effect */
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Add a shadow effect to the carousel */
+.carousel {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
 
 
   
