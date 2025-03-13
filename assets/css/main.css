@@ -755,6 +755,9 @@ section,
 }
 
 @media (max-width: 640px) {
+  .sitename h1{
+    font-size:20px;
+  }
   .hero h2 {
     font-size: 36px;
   }
