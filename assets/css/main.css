@@ -33,40 +33,45 @@
 
 
 
-/* Swiper Container */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
 
-/* Ensure all images are the same size */
-.swiper-slide img {
+/* Ensure all carousel images have the same size */
+.carousel-item img {
   width: 100%;
   height: 400px; /* Adjust this value to match the height of the second image */
   object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
-/* Pagination Styles */
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Custom Slide Animation */
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
-/* Navigation Button Styles */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff; /* Change the color of the navigation buttons */
-  background-color: rgba(0, 0, 0, 0.5); /* Add a background for better visibility */
-  padding: 20px;
-  border-radius: 50%;
+/* Fade Effect */
+.carousel-item.active {
+  opacity: 1;
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darken background on hover */
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0;
+  transform: translateX(0);
 }
+
+.carousel-item-next.carousel-item-start,
+.carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Add a shadow effect to the carousel */
+.carousel {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+
 
 
 
