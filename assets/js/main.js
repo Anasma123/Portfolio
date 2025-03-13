@@ -31,24 +31,77 @@
 
 
 
-
-// Initialize the carousel with autoplay and custom options
-var myCarousel = document.querySelector('#carouselExampleIndicators');
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 3000, // Auto-play every 3 seconds
-  wrap: true, // Enables infinite looping
-  pause: false, // Disable pause on hover
+var swiper = new Swiper('.swiper-container', {
+  effect: 'fade', // Fade effect
+  loop: true, // Infinite looping
+  autoplay: {
+    delay: 3000, // Auto-play every 3 seconds
+    disableOnInteraction: false, // Continue autoplay after user interaction
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
-// Optional: Add event listeners for custom behavior
-myCarousel.addEventListener('slide.bs.carousel', function (event) {
-  console.log('Slide transition started');
+  var swiper = new Swiper('.swiper-container', {
+  effect: 'cube', // Cube effect
+  grabCursor: true, // Show grab cursor
+  loop: true, // Infinite looping
+  autoplay: {
+    delay: 3000, // Auto-play every 3 seconds
+    disableOnInteraction: false,
+  },
+  cubeEffect: {
+    shadow: true, // Enable shadow
+    slideShadows: true, // Slide shadows
+    shadowOffset: 20, // Shadow offset
+    shadowScale: 0.94, // Shadow scale
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
-
-myCarousel.addEventListener('slid.bs.carousel', function (event) {
-  console.log('Slide transition completed');
+  var swiper = new Swiper('.swiper-container', {
+  effect: 'coverflow', // Coverflow effect
+  grabCursor: true, // Show grab cursor
+  centeredSlides: true, // Center slides
+  loop: true, // Infinite looping
+  autoplay: {
+    delay: 3000, // Auto-play every 3 seconds
+    disableOnInteraction: false,
+  },
+  coverflowEffect: {
+    rotate: 50, // Rotate slides
+    stretch: 0, // Stretch slides
+    depth: 100, // Depth of slides
+    modifier: 1, // Effect modifier
+    slideShadows: true, // Enable slide shadows
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
-
+  var swiper = new Swiper('.swiper-container', {
+  effect: 'flip', // Flip effect
+  grabCursor: true, // Show grab cursor
+  loop: true, // Infinite looping
+  autoplay: {
+    delay:
 
 
   
