@@ -53,10 +53,6 @@ var swiper = new Swiper('.swiper-container', {
 
 
 
-
-
-
-
   
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
