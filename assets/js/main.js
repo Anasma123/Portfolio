@@ -48,7 +48,6 @@
 
 
 
-
   document.addEventListener('DOMContentLoaded', () => {
     const scrollContainer = document.querySelector('.scrollable-container');
     const scrollLeftButton = document.querySelector('.scroll-button.left');
@@ -84,7 +83,6 @@
       });
     });
   });
-
 
 
   
