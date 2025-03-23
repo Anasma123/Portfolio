@@ -9,9 +9,6 @@
 (function() {
   "use strict";
 
-
-
-  
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
@@ -22,41 +19,6 @@
     window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
-
-
-
-
-
-
-
-
-
-
-// Initialize the carousel with autoplay and custom options
-var myCarousel = document.querySelector('#carouselExampleIndicators');
-var carousel = new bootstrap.Carousel(myCarousel, {
-  interval: 3000, // Auto-play every 3 seconds
-  wrap: true, // Enables infinite looping
-  pause: false, // Disable pause on hover
-});
-
-// Optional: Add event listeners for custom behavior
-myCarousel.addEventListener('slide.bs.carousel', function (event) {
-  console.log('Slide transition started');
-});
-
-myCarousel.addEventListener('slid.bs.carousel', function (event) {
-  console.log('Slide transition completed');
-});
-
-  
-
-
-
-
-
-
-  
   document.addEventListener('scroll', toggleScrolled);
   window.addEventListener('load', toggleScrolled);
 
@@ -83,6 +45,49 @@ myCarousel.addEventListener('slid.bs.carousel', function (event) {
     });
 
   });
+
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollContainer = document.querySelector('.scrollable-container');
+    const scrollLeftButton = document.querySelector('.scroll-button.left');
+    const scrollRightButton = document.querySelector('.scroll-button.right');
+    const certificateItems = document.querySelectorAll('.certificate-item');
+
+    // Calculate the width of one certificate item including margin
+    const itemWidth = certificateItems[0].offsetWidth + parseInt(window.getComputedStyle(certificateItems[0]).marginRight);
+
+    let currentScroll = 0;
+
+    // Scroll left
+    scrollLeftButton.addEventListener('click', () => {
+      currentScroll -= itemWidth;
+      if (currentScroll < 0) {
+        currentScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth; // Loop to the end
+      }
+      scrollContainer.scrollTo({
+        left: currentScroll,
+        behavior: 'smooth'
+      });
+    });
+
+    // Scroll right
+    scrollRightButton.addEventListener('click', () => {
+      currentScroll += itemWidth;
+      if (currentScroll >= scrollContainer.scrollWidth) {
+        currentScroll = 0; // Loop to the beginning
+      }
+      scrollContainer.scrollTo({
+        left: currentScroll,
+        behavior: 'smooth'
+      });
+    });
+  });
+
+
+
+  
 
   /**
    * Toggle mobile nav dropdowns
