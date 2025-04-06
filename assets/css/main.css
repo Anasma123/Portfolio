@@ -1358,15 +1358,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Dark Mode Theme */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
-}
 
-body.dark-mode a {
-  color: #90caf9;
-}
 
 body.dark-mode .section,
 body.dark-mode .container,
@@ -1377,6 +1369,259 @@ body.dark-mode footer {
   border-color: #333 !important;
 }
 
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode #about {
+  background: #1e1e1e !important;
+}
+
+body.dark-mode #about h2,
+body.dark-mode #about h4,
+body.dark-mode #about p {
+  color: #ffffff !important;
+}
+
+body.dark-mode #about strong {
+  color: #a3e635 !important; /* Optional bright green */
+}
+
+body.dark-mode #about .card-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left: 4px solid #a3e635;
+}
+
+body.dark-mode a {
+  color: #ffffff;
+}
+
+
+/* Base styles */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #71c55d 0%, #f9fbf9 50%, #ffffff 100%);
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+.dark-mode .about-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #111 50%, #000 100%);
+}
+
+.about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 30%, rgba(113, 197, 93, 0.2) 0%, transparent 70%),
+              radial-gradient(circle at 80% 70%, rgba(44, 131, 214, 0.15) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+  align-items: center;
+}
+
+.about-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.about-box {
+  background: white;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: popup 0.8s ease forwards;
+}
+.dark-mode .about-box {
+  background: rgba(30, 30, 30, 0.6); /* soft translucent dark */
+  backdrop-filter: blur(10px);       /* optional: adds a frosted glass effect */
+  box-shadow: 0 10px 30px rgba(255, 254, 254, 0.4);
+}
+.about-box {
+  background: white;
+  color: #212529;
+  transition: all 0.5s ease;
+}
+
+.dark-mode .about-box {
+  background: rgba(30, 30, 30, 0.6); /* Or use any dark background you like */
+  color: #f1f1f1;
+}
+
+
+.circle-bg {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(113, 197, 93, 0.2), rgba(44, 131, 214, 0.2));
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about-header {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+.header-line {
+  display: inline-block;
+  width: 80px;
+  height: 4px;
+  background: #71c55d;
+  margin-bottom: 25px;
+  border-radius: 2px;
+}
+.about-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #212529;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.dark-mode .about-title {
+  color: #f1f1f1;
+}
+.highlight-name {
+  background: #71c55d;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.about-subtitle {
+  color: #71c55d;
+  font-weight: 600;
+  font-size: 20px;
+}
+.about-description {
+  color: #666;
+  font-size: 18px;
+}
+.dark-mode .about-description {
+  color: #bbb;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+.dark-mode .about-text p {
+  color: #ccc;
+}
+.highlight {
+  color: #71c55d;
+}
+
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.skill-box {
+  background: rgba(113, 197, 93, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #71c55d;
+  transition: transform 0.3s ease;
+}
+.skill-box:hover {
+  transform: translateY(-5px);
+}
+.skill-box h4 {
+  font-size: 20px;
+  color: #212529;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.dark-mode .skill-box h4 {
+  color: #fff;
+}
+.skill-box p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+}
+.dark-mode .skill-box p {
+  color: #ccc;
+}
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #71c55d;
+  color: white;
+  border-radius: 6px;
+  margin-right: 12px;
+  font-size: 16px;
+}
+
+.about-cta {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  background: #71c55d;
+  color: white;
+  padding: 16px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(113, 197, 93, 0.4);
+}
+.cta-button:hover {
+  background: #5da94b;
+}
+.arrow-icon {
+  margin-left: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+
+
+.about {
+  background: none !important;
+  background-color: #f7f9fc !important;
+  position: relative;
+  z-index: 1;
+}
 
 
 
@@ -1384,7 +1629,64 @@ body.dark-mode footer {
 
 
 
+  #about::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+    .dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+
+ 
+  .dark-mode {
+    background-color: #121212 !important;
+    color: #f0f0f0 !important;
+  }
+
+  .dark-mode a {
+    color: #90caf9 !important;
+  }
+
+  .dark-mode .navmenu ul li a {
+    color: #f0f0f0 !important;
+  }
+
+  .dark-mode .about,
+  .dark-mode .about div,
+  .dark-mode .about p,
+  .dark-mode .about h2,
+  .dark-mode .about h4 {
+    background-color: transparent !important;
+    color: #f0f0f0 !important;
+  }
+
+  .dark-mode .about .skill-box {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-left-color: #90caf9 !important;
+  }
 
 
 
+  body.dark-mode {
+    --hero-title-color: #ffffff;
+    --subtitle-color: #cccccc;
+    --paragraph-color: #bbbbbb;
+  }
 
+  body:not(.dark-mode) {
+    --hero-title-color: #000000;
+    --subtitle-color: #6c757d;
+    --paragraph-color: #6c757d;
+  }
