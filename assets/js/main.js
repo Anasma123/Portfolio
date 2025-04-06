@@ -170,20 +170,44 @@
 })();
 
 
-  const toggleBtn = document.getElementById("theme-toggle");
-  const icon = document.getElementById("theme-icon");
-  const body = document.body;
 
-  // Apply saved theme on load
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    icon.textContent = "☀️";
-  }
+  const themeToggle = document.getElementById("theme-toggle");
 
-  toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    const isDark = body.classList.contains("dark-mode");
-    icon.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+  themeToggle?.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
   });
 
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    const hero = document.getElementById('hero');
+    if (document.body.classList.contains('dark-mode')) {
+      hero.style.background = 'linear-gradient(to right, #1e1e1e, #2c2c2c)';
+      hero.style.color = '#fff';
+    } else {
+      hero.style.background = 'linear-gradient(to right, #f9f9f9, #ffffff)';
+      hero.style.color = '#000';
+    }
+  }
+
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+
+    const header = document.getElementById("header");
+    const highlightName = document.getElementById("highlight-name");
+    const normalName = document.getElementById("normal-name");
+
+    if (document.body.classList.contains("dark-mode")) {
+      header.style.backgroundColor = "#111";
+      header.style.color = "#fff";
+      highlightName.style.color = "#00ffff"; // or white if you prefer
+      normalName.style.color = "#fff";
+    } else {
+      header.style.backgroundColor = "white";
+      header.style.color = "black";
+      highlightName.style.color = "green";
+      normalName.style.color = "black";
+    }
+  }
