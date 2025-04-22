@@ -171,43 +171,44 @@
 
 
 
-  const themeToggle = document.getElementById("theme-toggle");
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('theme-toggle');
+  const certificateToggle = document.getElementById('certificate-toggle');
+  const certificateContainer = document.querySelector('.certificate-container');
+  const scrollContainer = document.querySelector('.scrollable-container');
+  const scrollLeftBtn = document.querySelector('.scroll-button.left');
+  const scrollRightBtn = document.querySelector('.scroll-button.right');
 
-  themeToggle?.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
+  // Set default dark mode
+  if (!localStorage.getItem('theme')) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }
+
+  // Theme toggle
+  themeToggle?.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
   });
 
+  // Certificate toggle
+  certificateToggle?.addEventListener('click', () => {
+    certificateContainer.classList.toggle('hidden');
+    certificateToggle.textContent = certificateContainer.classList.contains('hidden') ? 'Show Certificates' : 'Hide Certificates';
+  });
 
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+  // Scroll buttons
+  scrollLeftBtn?.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+  });
 
-    const hero = document.getElementById('hero');
-    if (document.body.classList.contains('dark-mode')) {
-      hero.style.background = 'linear-gradient(to right, #1e1e1e, #2c2c2c)';
-      hero.style.color = '#fff';
-    } else {
-      hero.style.background = 'linear-gradient(to right, #f9f9f9, #ffffff)';
-      hero.style.color = '#000';
-    }
-  }
-
-
-  function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-
-    const header = document.getElementById("header");
-    const highlightName = document.getElementById("highlight-name");
-    const normalName = document.getElementById("normal-name");
-
-    if (document.body.classList.contains("dark-mode")) {
-      header.style.backgroundColor = "#111";
-      header.style.color = "#fff";
-      highlightName.style.color = "#00ffff"; // or white if you prefer
-      normalName.style.color = "#fff";
-    } else {
-      header.style.backgroundColor = "white";
-      header.style.color = "black";
-      highlightName.style.color = "green";
-      normalName.style.color = "black";
-    }
-  }
+  scrollRightBtn?.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+});
