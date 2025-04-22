@@ -36,78 +36,32 @@
 </head>
 
 <body class="index-page">
-  <header id="header" class="header d-flex align-items-center sticky-top"
-  style="background-color: white; color: black; transition: background-color 0.3s, color 0.3s;">
-  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-    <a href="index.html" class="logo d-flex align-items-center" style="color: inherit; text-decoration: none;">
-      <h1 class="sitename" id="header-text" style="margin: 0; font-size: 24px; font-weight: bold;">
-        <span id="highlight-name" style="color: green;">MUHAMMED</span> <span id="normal-name" style="color: black;">ANAS M A</span>
-      </h1>
-    </a>
-
-  </div>
-
-
-
-
-
-
-
+  <header id="header" class="header">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename" id="header-text">
+          <span id="highlight-name">MUHAMMED</span> <span id="normal-name">ANAS M A</span>
+        </h1>
+      </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#features">Features</a></li>
-
           <li><a href="#contact">Contact</a></li>
-<li>
-  <div onclick="toggleDarkMode()" style="
-    width: 60px;
-    height: 30px;
-    background: #e0e0e0;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-    margin-left: 10px;
-  " id="theme-toggle-button">
-    <span style="font-size: 14px;">🌞</span>
-    <div id="toggle-thumb" style="
-      width: 24px;
-      height: 24px;
-      background: white;
-      border-radius: 50%;
-      position: absolute;
-      left: 3px;
-      top: 3px;
-      transition: all 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    "></div>
-    <span style="font-size: 14px;">🌙</span>
-  </div>
-</li>
-
-  <span id="theme-icon">🌙</span>
-</button>
-</li>
+          <li>
+            <div id="theme-toggle" class="theme-toggle-btn">
+              <div id="toggle-thumb"></div>
+              <i class="icon bi bi-sun-fill"></i>
+              <i class="icon bi bi-moon-fill"></i>
+            </div>
+          </li>
         </ul>
-        
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-
-      
-
     </div>
   </header>
-
   <main class="main">
 
     <!-- Hero Section -->
@@ -890,139 +844,104 @@ document.getElementById('theme-toggle')?.addEventListener('click', function() {
 
   <!-- Certificates & Achievements Section -->
   <section id="certificates" class="certificates section">
-  
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Certificates & Achievements</h2>
-      <div><span>Explore My</span> <span class="description-title">Certificates</span></div>
-    </div><!-- End Section Title -->
-  
-    <div class="container" style="position: relative;">
-  
-      <!-- Left Navigation Button -->
-      <button class="scroll-button left" style="position: absolute; left: -30px; top: 50%; transform: translateY(-50%); background: #fff; border: 1px solid #e0e0e0; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; z-index: 10;">
-        <i class="bi bi-chevron-left" style="font-size: 20px; color: #333;"></i>
-      </button>
-  
-      <!-- Horizontal Scrollable Container -->
-      <div class="scrollable-container" style="display: flex; overflow-x: auto; padding-bottom: 20px; scroll-behavior: smooth; scroll-snap-type: x mandatory;">
-          <!-- Certificate 1 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/nss.jpg" alt="Certificate 1" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #20c997; margin-top: 15px;">National Service Scheme</h3>
-            <p style="font-size: 14px; color: #555;">University of Calicut</p>
-          </div><!-- End Certificate Item -->
-    
-          <!-- Certificate 2 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/spectrum.jpg" alt="Certificate 2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #0dcaf0; margin-top: 15px;">Industrial Visit</h3>
-            <p style="font-size: 14px; color: #555;">Spectrum Softtech Solutions</p>
-          </div><!-- End Certificate Item -->
-    
-          <!-- Certificate 3 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/softronic.jpg" alt="Certificate 3" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #fd7e14; margin-top: 15px;">Data Science + Python</h3>
-            <p style="font-size: 14px; color: #555;">Softroniics</p>
-          </div><!-- End Certificate Item -->
-    
-          <!-- Certificate 4 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/project.jpg" alt="Certificate 4" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #0d6efd; margin-top: 15px;">Python + Flutter</h3>
-            <p style="font-size: 14px; color: #555;">Riss Technology</p>
-          </div><!-- End Certificate Item -->
-    
-          <!-- Certificate 5 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/redteam.jpg" alt="Certificate 5" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #6f42c1; margin-top: 15px;">Essential Of Ethical Hacking</h3>
-            <p style="font-size: 14px; color: #555;">Red Team Hacker Accademy</p>
-          </div><!-- End Certificate Item -->
-    
-          <!-- Certificate 6 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/kuttikottam.jpg" alt="Certificate 6" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #d63384; margin-top: 15px;">Hi School Kuttikkoottam</h3>
-            <p style="font-size: 14px; color: #555;">Kerala Infrastructure and Technology For Education</p>
-          </div><!-- End Certificate Item -->
-  
-  
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/edunet.jpg" alt="Certificate 1" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #20c997; margin-top: 15px;">Data Analystics Using Python</h3>
-            <p style="font-size: 14px; color: #555;">Edunet foundation and ASAP </p>
-          </div><!-- End Certificate Item -->
-  
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/malvair.jpg" alt="Certificate 2" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #0dcaf0; margin-top: 15px;">Malware Analysis</h3>
-            <p style="font-size: 14px; color: #555;">RedTeam Hacker Academy</p>
-          </div><!-- End Certificate Item -->
-  
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/car.jpg" alt="Certificate 3" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #fd7e14; margin-top: 15px;">Car Hacking</h3>
-            <p style="font-size: 14px; color: #555;">RedTeam Hacker Academy</p>
-          </div><!-- End Certificate Item -->
-  
-          <!-- Certificate 4 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/cyber.jpg" alt="Certificate 4" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #0d6efd; margin-top: 15px;">Cyber RedTeaming The Art of Ethical Hacking</h3>
-            <p style="font-size: 14px; color: #555;">RedTeam Hacker Academy</p>
-          </div><!-- End Certificate Item -->
-  
-  
-          <!-- Certificate 5 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/dive.jpg" alt="Certificate 5" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #6f42c1; margin-top: 15px;">Dive into Server-side Request Forgery</h3>
-            <p style="font-size: 14px; color: #555;">Red Team Hacker Accademy</p>
-          </div><!-- End Certificate Item -->
-  
-          <!-- Certificate 6 -->
-          <div class="certificate-item" style="flex: 0 0 300px; margin-right: 20px; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; text-align: center; scroll-snap-align: start; height: 400px;">
-            <div class="certificate-image" style="width: 100%; height: 200px; overflow: hidden; border-radius: 8px;">
-              <img src="assets/img/docker.jpg" alt="Certificate 6" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <h3 style="color: #d63384; margin-top: 15px;">Docker Security</h3>
-            <p style="font-size: 14px; color: #555;">Redteam Hacker Academy</p>
-          </div><!-- End Certificate Item -->
-    
-        </div><!-- End Horizontal Scrollable Container -->
-    
-        <!-- Right Navigation Button -->
-        <button class="scroll-button right" style="position: absolute; right: -30px; top: 50%; transform: translateY(-50%); background: #fff; border: 1px solid #e0e0e0; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; z-index: 10;">
-          <i class="bi bi-chevron-right" style="font-size: 20px; color: #333;"></i>
-        </button>
-    
+    <div class="container">
+      <div class="section-title">
+        <h2>Certificates</h2>
+        <div>My Achievements</div>
       </div>
-    
-    <!-- </section> -->
+      <button id="certificate-toggle" class="certificate-toggle">Hide Certificates</button>
+      <div class="certificate-container">
+        <div class="scrollable-container">
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/nss.jpg" alt="National Service Scheme Certificate">
+            </div>
+            <h3>National Service Scheme</h3>
+            <p>University of Calicut</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/spectrum.jpg" alt="Industrial Visit Certificate">
+            </div>
+            <h3>Industrial Visit</h3>
+            <p>Spectrum Softtech Solutions</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/softronic.jpg" alt="Data Science + Python Certificate">
+            </div>
+            <h3>Data Science + Python</h3>
+            <p>Softroniics</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/project.jpg" alt="Python + Flutter Certificate">
+            </div>
+            <h3>Python + Flutter</h3>
+            <p>Riss Technology</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/redteam.jpg" alt="Essential Of Ethical Hacking Certificate">
+            </div>
+            <h3>Essential Of Ethical Hacking</h3>
+            <p>Red Team Hacker Academy</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/kuttikottam.jpg" alt="Hi School Kuttikkoottam Certificate">
+            </div>
+            <h3>Hi School Kuttikkoottam</h3>
+            <p>Kerala Infrastructure and Technology For Education</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/edunet.jpg" alt="Data Analytics Using Python Certificate">
+            </div>
+            <h3>Data Analytics Using Python</h3>
+            <p>Edunet Foundation and ASAP</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/malvair.jpg" alt="Malware Analysis Certificate">
+            </div>
+            <h3>Malware Analysis</h3>
+            <p>RedTeam Hacker Academy</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/car.jpg" alt="Car Hacking Certificate">
+            </div>
+            <h3>Car Hacking</h3>
+            <p>RedTeam Hacker Academy</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/cyber.jpg" alt="Cyber RedTeaming Certificate">
+            </div>
+            <h3>Cyber RedTeaming The Art of Ethical Hacking</h3>
+            <p>RedTeam Hacker Academy</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/dive.jpg" alt="Server-side Request Forgery Certificate">
+            </div>
+            <h3>Dive into Server-side Request Forgery</h3>
+            <p>Red Team Hacker Academy</p>
+          </div>
+          <div class="certificate-item">
+            <div class="certificate-image">
+              <img src="assets/img/docker.jpg" alt="Docker Security Certificate">
+            </div>
+            <h3>Docker Security</h3>
+            <p>Redteam Hacker Academy</p>
+          </div>
+        </div>
+        <button class="scroll-button left"><i class="bi bi-chevron-left"></i></button>
+        <button class="scroll-button right"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
   
   
   <!-- </section> -->
@@ -1104,168 +1023,73 @@ document.getElementById('theme-toggle')?.addEventListener('click', function() {
     <!-- /Faq Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <!-- <section id="contact" class="contact section"> -->
 
-      <section id="contact" class="contact" style="padding: 40px 0; background: linear-gradient(135deg, #f8fbf8 0%, #e8f5e9 100%);">
-        <div class="container" style="max-width: 100%; margin: 0 auto; padding: 0 15px; text-align: center;">
-          
-          <!-- Section Title with Animation -->
-          <div class="section-title" style="margin-bottom: 30px; animation: fadeIn 0.8s ease-out;">
-            <h2 style="font-size: 28px; margin-bottom: 10px; background: linear-gradient(135deg, #71c55d 0%, #2c83d6 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">
-              Let's Connect
-            </h2>
-            <p style="font-size: 16px; color: #5a6a7e; margin: 0; animation: fadeIn 1s ease-out;">
-              Reach out through any of these platforms
-            </p>
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Let's Connect</h2>
+      <p>Reach out through any of these platforms</p>
+    </div>
+    <div class="social-grid">
+      <a href="https://www.linkedin.com/in/Muhammedanasma" target="_blank" class="social-card">
+        <div class="social-card-inner">
+          <div class="social-icon linkedin">
+            <i class="bi bi-linkedin"></i>
           </div>
-      
-          <!-- Social Connection Links with Popup Animation -->
-          <div class="social-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 25px;">
-            
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/Muhammedanasma" target="_blank" class="social-card" style="text-decoration: none; animation: popIn 0.5s ease-out 0.1s both;">
-              <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%; border-top: 3px solid #0077b5; position: relative; overflow: hidden;">
-                <div style="background: #0077b5; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; transition: all 0.3s ease;">
-                  <i class="bi bi-linkedin" style="color: white; font-size: 20px;"></i>
-                </div>
-                <span style="color: #2d3748; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">LinkedIn</span>
-                <div class="popup-info" style="position: absolute; bottom: -50px; left: 0; width: 100%; background: #0077b5; color: white; padding: 8px; font-size: 12px; transition: all 0.3s ease;">
-                  Professional Profile
-                </div>
-              </div>
-            </a>
-      
-            <!-- GitHub -->
-            <a href="https://github.com/Anasma123" target="_blank" class="social-card" style="text-decoration: none; animation: popIn 0.5s ease-out 0.2s both;">
-              <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%; border-top: 3px solid #333; position: relative; overflow: hidden;">
-                <div style="background: #333; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; transition: all 0.3s ease;">
-                  <i class="bi bi-github" style="color: white; font-size: 20px;"></i>
-                </div>
-                <span style="color: #2d3748; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">GitHub</span>
-                <div class="popup-info" style="position: absolute; bottom: -50px; left: 0; width: 100%; background: #333; color: white; padding: 8px; font-size: 12px; transition: all 0.3s ease;">
-                  My Code Repos
-                </div>
-              </div>
-            </a>
-      
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/muhammed_anas_ma" target="_blank" class="social-card" style="text-decoration: none; animation: popIn 0.5s ease-out 0.3s both;">
-              <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%; border-top: 3px solid #e1306c; position: relative; overflow: hidden;">
-                <div style="background: linear-gradient(45deg, #405de6, #833ab4, #e1306c); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; transition: all 0.3s ease;">
-                  <i class="bi bi-instagram" style="color: white; font-size: 20px;"></i>
-                </div>
-                <span style="color: #2d3748; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">Instagram</span>
-                <div class="popup-info" style="position: absolute; bottom: -50px; left: 0; width: 100%; background: linear-gradient(45deg, #405de6, #833ab4); color: white; padding: 8px; font-size: 12px; transition: all 0.3s ease;">
-                  Personal Feed
-                </div>
-              </div>
-            </a>
-      
-            <!-- YouTube -->
-            <a href="https://www.youtube.com/@ruzaarmedia2251" target="_blank" class="social-card" style="text-decoration: none; animation: popIn 0.5s ease-out 0.4s both;">
-              <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%; border-top: 3px solid #ff0000; position: relative; overflow: hidden;">
-                <div style="background: #ff0000; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; transition: all 0.3s ease;">
-                  <i class="bi bi-youtube" style="color: white; font-size: 20px;"></i>
-                </div>
-                <span style="color: #2d3748; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">YouTube</span>
-                <div class="popup-info" style="position: absolute; bottom: -50px; left: 0; width: 100%; background: #ff0000; color: white; padding: 8px; font-size: 12px; transition: all 0.3s ease;">
-                  Ruzaar Media
-                </div>
-              </div>
-            </a>
-      
-            <!-- Email - Full width on mobile -->
-            <a href="mailto:anasmapvt@gmail.com" class="social-card" style="text-decoration: none; grid-column: span 2; animation: popIn 0.5s ease-out 0.5s both;">
-              <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: 100%; border-top: 3px solid #71c55d; position: relative; overflow: hidden;">
-                <div style="background: #71c55d; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; transition: all 0.3s ease;">
-                  <i class="bi bi-envelope" style="color: white; font-size: 20px;"></i>
-                </div>
-                <span style="color: #2d3748; font-weight: 600; font-size: 14px; transition: all 0.3s ease;">Email Me</span>
-                <div class="popup-info" style="position: absolute; bottom: -50px; left: 0; width: 100%; background: #71c55d; color: white; padding: 8px; font-size: 12px; transition: all 0.3s ease;">
-                  anasmapvt@gmail.com
-                </div>
-              </div>
-            </a>
-          </div>
-      
-          <!-- Location with Animation -->
-          <div style="background: white; padding: 12px 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); display: inline-flex; align-items: center; gap: 10px; margin-bottom: 25px; max-width: 100%; animation: fadeIn 1.2s ease-out;">
-            <div style="background: #71c55d; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-              <i class="bi bi-geo-alt" style="color: white; font-size: 18px;"></i>
-            </div>
-            <span style="color: #2d3748; font-weight: 600; font-size: 15px;">Kerala, India</span>
-          </div>
-      
-          <!-- Copyright Footer with Animation -->
-          <div style="padding: 15px 0; border-top: 1px solid #e2e8f0; animation: fadeIn 1.5s ease-out;">
-            <p style="color: #718096; font-size: 14px; margin: 0; line-height: 1.5;">
-              © Copyright <strong style="color: #71c55d;">Muhammed Anas M A</strong> All Rights Reserved
-            </p>
-            <p style="color: #a0aec0; font-size: 12px; margin: 5px 0 0;">
-              Designed by <span style="color: #71c55d;">Anas</span> 
-            </p>
-          </div>
-      
+          <span>LinkedIn</span>
+          <div class="popup-info">Professional Profile</div>
         </div>
-      </section>
-      
-      <style>
-        /* Keyframe Animations */
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes popIn {
-          0% { opacity: 0; transform: scale(0.8); }
-          60% { opacity: 1; transform: scale(1.05); }
-          100% { opacity: 1; transform: scale(1); }
-        }
-        
-        /* Mobile Tap Effects */
-        .social-card:active {
-          transform: scale(0.98);
-        }
-        
-        .social-card:active .popup-info {
-          bottom: 0 !important;
-        }
-        
-        /* Desktop Hover Effects */
-        @media (min-width: 768px) {
-          .contact {
-            padding: 60px 0;
-          }
-          
-          .social-grid {
-            grid-template-columns: repeat(5, 1fr);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          
-          .social-card {
-            grid-column: span 1 !important;
-          }
-          
-          .social-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-          }
-          
-          .social-card:hover .popup-info {
-            bottom: 0;
-          }
-          
-          .social-card:hover > div > div:first-child {
-            transform: scale(1.1);
-          }
-          
-          .social-card:hover span {
-            color: white;
-          }
-        }
-      </style><!-- /Contact Section -->
+      </a>
+      <a href="https://github.com/Anasma123" target="_blank" class="social-card">
+        <div class="social-card-inner">
+          <div class="social-icon github">
+            <i class="bi bi-github"></i>
+          </div>
+          <span>GitHub</span>
+          <div class="popup-info">My Code Repos</div>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/muhammed_anas_ma" target="_blank" class="social-card">
+        <div class="social-card-inner">
+          <div class="social-icon instagram">
+            <i class="bi bi-instagram"></i>
+          </div>
+          <span>Instagram</span>
+          <div class="popup-info">Personal Feed</div>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@ruzaarmedia2251" target="_blank" class="social-card">
+        <div class="social-card-inner">
+          <div class="social-icon youtube">
+            <i class="bi bi-youtube"></i>
+          </div>
+          <span>YouTube</span>
+          <div class="popup-info">Ruzaar Media</div>
+        </div>
+      </a>
+      <a href="mailto:anasmapvt@gmail.com" class="social-card email">
+        <div class="social-card-inner">
+          <div class="social-icon email">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <span>Email Me</span>
+          <div class="popup-info">anasmapvt@gmail.com</div>
+        </div>
+      </a>
+    </div>
+    <div class="location">
+      <div class="location-icon">
+        <i class="bi bi-geo-alt"></i>
+      </div>
+      <span>Kerala, India</span>
+    </div>
+    <div class="copyright">
+      <p>© Copyright <strong>Muhammed Anas M A</strong> All Rights Reserved</p>
+      <p>Designed by <span>Anas</span></p>
+    </div>
+  </div>
+</section><!-- /Contact Section -->
 
   </main>
 
