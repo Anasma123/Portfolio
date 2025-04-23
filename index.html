@@ -12,6 +12,20 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="assets/js/theme-toggle.js"></script>
+
+
+
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -36,25 +50,23 @@
 </head>
 
 <body class="index-page">
-  <header id="header" class="header">
+  <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename" id="header-text">
-          <span id="highlight-name">MUHAMMED</span> <span id="normal-name">ANAS M A</span>
-        </h1>
+        <h1><span id="normal-name">Muhammed Anas</span> <span id="highlight-name">M A</span></h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#features">Features</a></li>
+          <li><a href="#certificates">Certificates</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
-            <div id="theme-toggle" class="theme-toggle-btn">
-              <div id="toggle-thumb"></div>
-              <i class="icon bi bi-sun-fill"></i>
-              <i class="icon bi bi-moon-fill"></i>
+            <div class="theme-toggle-btn" id="theme-toggle">
+              <span class="icon sun-icon">☀️</span>
+              <span class="icon moon-icon">🌙</span>
+              <span id="toggle-thumb"></span>
             </div>
           </li>
         </ul>
@@ -98,57 +110,47 @@
     </section>
     
 
-      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
-        <div class="container position-relative">
-          <div class="row gy-4 mt-5">
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-easel"></i></div>
-                <h4 class="title"><a href="" class="stretched-link"> Creative Solutions</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-gem"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Tech Consulting </a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-easel"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Automation & AI</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
-            <div class="col-xl-3 col-md-6">
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-command"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Digital Branding</a></h4>
-              </div>
-            </div><!--End Icon Box -->
-
+    <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+          <div class="col-xl-3 col-md-6">
+            <div class="icon-box visible">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Creative Solutions</a></h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="icon-box visible">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Tech Consulting</a></h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="icon-box visible">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Automation & AI</a></h4>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="icon-box visible">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href="" class="stretched-link">Digital Branding</a></h4>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about" style="background: none; background-color: #f7f9fc; position: relative; z-index: 1; overflow: hidden;">
+    <section id="about" class="about section">
       <div class="about-overlay"></div>
-    
       <div class="about-container">
         <div class="about-wrapper">
-          <!-- Content Column -->
-          <div class="about-content">
+          <div class="about-content" data-aos="fade-up">
             <div class="about-box">
-              <!-- Animated Circle Background -->
               <div class="circle-bg"></div>
-    
-              <!-- Professional Header -->
               <div class="about-header">
                 <span class="header-line"></span>
                 <h2 class="about-title">
@@ -157,8 +159,6 @@
                 <p class="about-subtitle">MCA Graduate | Full-Stack Developer | Digital Creator</p>
                 <p class="about-description">Transforming ideas into digital experiences through code and creativity</p>
               </div>
-    
-              <!-- Engaging Content -->
               <div class="about-text">
                 <p>
                   As a versatile <strong class="highlight">Python Developer</strong> and
@@ -167,31 +167,27 @@
                   complete project execution from concept to deployment.
                 </p>
               </div>
-    
-              <!-- Skills Showcase -->
               <div class="about-skills">
-                <div class="skill-box">
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="100">
                   <h4><span class="skill-icon">1</span> Technical Expertise</h4>
                   <p><strong>Python</strong> (Django/Flask), <strong>C++</strong>, <strong>JavaScript</strong>,
                     <strong>HTML/CSS</strong>, Full-Stack Web Development</p>
                 </div>
-                <div class="skill-box">
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="200">
                   <h4><span class="skill-icon">2</span> Digital Creativity</h4>
                   <p><strong>Video Editing</strong>, <strong>Poster Design</strong>, <strong>Content Creation</strong>,
                     <strong>Photography</strong>, Digital Marketing</p>
                 </div>
-                <div class="skill-box">
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="300">
                   <h4><span class="skill-icon">3</span> Professional Skills</h4>
                   <p><strong>Microsoft Office Expert</strong>, Data Management, Technical Documentation</p>
                 </div>
-                <div class="skill-box">
+                <div class="skill-box" data-aos="fade-up" data-aos-delay="400">
                   <h4><span class="skill-icon">4</span> Education</h4>
                   <p>Master of Computer Applications (MCA) - Specialized in Software Development</p>
                 </div>
               </div>
-    
-              <!-- CTA Button -->
-              <div class="about-cta">
+              <div class="about-cta" data-aos="fade-up" data-aos-delay="500">
                 <a href="#contact" class="cta-button">
                   Contact Me
                   <svg class="arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,6 +201,7 @@
         </div>
       </div>
     </section>
+  
     
 
 <!-- Styles and Animation -->
@@ -670,177 +667,180 @@ document.getElementById('theme-toggle')?.addEventListener('click', function() {
 </script>
     <!-- Services Section -->
     <section id="services" class="services section">
-
       <!-- Section Title -->
-      <section id="services" class="services section" style="padding: 60px 0;">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2 id="services-title" style="color: #111; transition: color 0.3s;">Services</h2>
-          <div>
-            <span id="check-our-text" style="color: #333; transition: color 0.3s;">Check Our</span>
-            <span id="description-title-text" style="color: #71c55d; font-weight: bold; transition: color 0.3s;">Services</span>
+      <div class="container section-title" data-aos="fade-up">
+        <h2 id="services-title" style="color: #111; transition: color 0.3s;">Services</h2>
+        <div class="title-wrapper">
+          <span id="check-our-text" style="color: #333; transition: color 0.3s;">Check Our</span>
+          <span id="description-title-text" style="color: #71c55d; font-weight: bold; transition: color 0.3s;">Services</span>
+        </div>
+      </div>
+    
+      <div class="container">
+        <div class="services-grid">
+          <!-- Service Item 1 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="100">
+            <div class="card-icon">
+              <i class="bi bi-code-slash"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Python Development</h3>
+              <p>Building high-performance, scalable applications using Python. Specializing in automation, API development, and backend solutions.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
+          </div>
+    
+          <!-- Service Item 2 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="150">
+            <div class="card-icon">
+              <i class="bi bi-globe"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Web & App Development</h3>
+              <p>Creating modern, responsive websites and cross-platform mobile apps using Django, Flask, JavaScript, and Flutter.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
+          </div>
+    
+          <!-- Service Item 3 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="200">
+            <div class="card-icon">
+              <i class="bi bi-robot"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Data Analytics, AI & Content Creation</h3>
+              <p>Providing data-driven insights, AI-powered automation, and professional content creation, including video editing and digital storytelling.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
+          </div>
+    
+          <!-- Service Item 4 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="250">
+            <div class="card-icon">
+              <i class="bi bi-megaphone"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Digital Marketing</h3>
+              <p>Helping businesses grow online with SEO strategies, social media marketing, and targeted digital campaigns.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
+          </div>
+    
+          <!-- Service Item 5 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="300">
+            <div class="card-icon">
+              <i class="bi bi-gear"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Automation</h3>
+              <p>Creating custom software solutions, optimizing backend systems, and automating business processes.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
+          </div>
+    
+          <!-- Service Item 6 -->
+          <div class="service-card" data-aos="flip-left" data-aos-delay="350">
+            <div class="card-icon">
+              <i class="bi bi-lightbulb"></i>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="card-content">
+              <h3>Tech Consulting</h3>
+              <p>Providing expert advice on software solutions, brand identity, and digital transformation strategies.</p>
+              <a href="service-details.html" class="service-link">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+            <div class="card-border"></div>
           </div>
         </div>
-      
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-activity"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Python Development</h3>
-              </a>
-              <p>Building high-performance, scalable applications using Python. Specializing in automation, API development, and backend solutions.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-broadcast"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Web & App Development </h3>
-              </a>
-              <p>Creating modern, responsive websites and cross-platform mobile apps using Django, Flask, JavaScript, and Flutter.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-easel"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Data Analytics, AI & Content Creation</h3>
-              </a>
-              <p>Providing data-driven insights, AI-powered automation, and professional content creation, including video editing and digital storytelling.</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Digital Marketing & SEO </h3>
-              </a>
-              <p>Helping businesses grow online with SEO strategies, social media marketing, and targeted digital campaigns.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Software Development & Automation</h3>
-              </a>
-              <p>Creating custom software solutions, optimizing backend systems, and automating business processes for efficiency.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Tech Consulting & Branding</h3>
-              </a>
-              <p>Providing expert advice on software solutions, brand identity, and digital transformation strategies for businesses.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-        </div>
-
       </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section light-background">
-
+    </section>
+    
+    
+    <section id="features" class="features section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Features</h2>
         <div><span>Check Our</span> <span class="description-title">Features</span></div>
-      </div><!-- End Section Title -->
-
+      </div>
+  
       <div class="container">
-
         <div class="row gy-5 justify-content-between">
-
           <div class="col-xl-5" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/assets/img//template/eStartup/features.svg" class="img-fluid" alt="">
+            <img src="assets/assets/img/template/eStartup/features.svg" class="img-fluid" alt="Features Image">
           </div>
-
+  
           <div class="col-xl-6 d-flex">
             <div class="row align-self-center gy-4">
-
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>Optimized solutions that grow with your business.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
+  
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>User-friendly designs for all devices.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
+  
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>AI-powered analytics for smarter decisions.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
+  
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>Boosting visibility with proven strategies.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
+  
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>Robust security and clean coding practices.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
+  
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
                 <div class="feature-box d-flex align-items-center">
                   <i class="bi bi-check"></i>
                   <h3>Complete technical support and consulting.</h3>
                 </div>
               </div><!-- End Feature Item -->
-
             </div>
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /Features Section -->
-
-    <!-- Pricing Section -->
-  </section><!-- /Features Section -->
+    </section>
+    
+    <!-- /Features Section -->
 
   <!-- Certificates & Achievements Section -->
   <section id="certificates" class="certificates section">
@@ -1025,71 +1025,58 @@ document.getElementById('theme-toggle')?.addEventListener('click', function() {
     <!-- Contact Section -->
     <!-- <section id="contact" class="contact section"> -->
 
-<section id="contact" class="contact section">
-  <div class="container">
-    <div class="section-title">
-      <h2>Let's Connect</h2>
-      <p>Reach out through any of these platforms</p>
-    </div>
-    <div class="social-grid">
-      <a href="https://www.linkedin.com/in/Muhammedanasma" target="_blank" class="social-card">
-        <div class="social-card-inner">
-          <div class="social-icon linkedin">
-            <i class="bi bi-linkedin"></i>
+      <section id="contact" class="contact section">
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Contact</h2>
+            <p>Get in Touch</p>
           </div>
-          <span>LinkedIn</span>
-          <div class="popup-info">Professional Profile</div>
-        </div>
-      </a>
-      <a href="https://github.com/Anasma123" target="_blank" class="social-card">
-        <div class="social-card-inner">
-          <div class="social-icon github">
-            <i class="bi bi-github"></i>
+          <div class="social-grid">
+            <a href="#" class="social-card linkedin" data-aos="fade-up" data-aos-delay="100">
+              <div class="social-card-inner">
+                <div class="social-icon"><i class="bi bi-linkedin"></i></div>
+                <span>LinkedIn</span>
+                <div class="popup-info">Connect with me</div>
+              </div>
+            </a>
+            <a href="#" class="social-card github" data-aos="fade-up" data-aos-delay="200">
+              <div class="social-card-inner">
+                <div class="social-icon"><i class="bi bi-github"></i></div>
+                <span>GitHub</span>
+                <div class="popup-info">View my projects</div>
+              </div>
+            </a>
+            <a href="#" class="social-card instagram" data-aos="fade-up" data-aos-delay="300">
+              <div class="social-card-inner">
+                <div class="social-icon"><i class="bi bi-instagram"></i></div>
+                <span>Instagram</span>
+                <div class="popup-info">Follow me</div>
+              </div>
+            </a>
+            <a href="#" class="social-card youtube" data-aos="fade-up" data-aos-delay="400">
+              <div class="social-card-inner">
+                <div class="social-icon"><i class="bi bi-youtube"></i></div>
+                <span>YouTube</span>
+                <div class="popup-info">Watch my videos</div>
+              </div>
+            </a>
+            <a href="#" class="social-card email" data-aos="fade-up" data-aos-delay="500">
+              <div class="social-card-inner">
+                <div class="social-icon"><i class="bi bi-envelope"></i></div>
+                <span>Email</span>
+                <div class="popup-info">Send me a message</div>
+              </div>
+            </a>
           </div>
-          <span>GitHub</span>
-          <div class="popup-info">My Code Repos</div>
-        </div>
-      </a>
-      <a href="https://www.instagram.com/muhammed_anas_ma" target="_blank" class="social-card">
-        <div class="social-card-inner">
-          <div class="social-icon instagram">
-            <i class="bi bi-instagram"></i>
+          <div class="location">
+            <div class="location-icon"><i class="bi bi-geo-alt"></i></div>
+            <span>Kerala, India</span>
           </div>
-          <span>Instagram</span>
-          <div class="popup-info">Personal Feed</div>
-        </div>
-      </a>
-      <a href="https://www.youtube.com/@ruzaarmedia2251" target="_blank" class="social-card">
-        <div class="social-card-inner">
-          <div class="social-icon youtube">
-            <i class="bi bi-youtube"></i>
+          <div class="copyright">
+            <p>© <strong>Muhammed Anas M A</strong> <span>2025</span>. All Rights Reserved.</p>
           </div>
-          <span>YouTube</span>
-          <div class="popup-info">Ruzaar Media</div>
         </div>
-      </a>
-      <a href="mailto:anasmapvt@gmail.com" class="social-card email">
-        <div class="social-card-inner">
-          <div class="social-icon email">
-            <i class="bi bi-envelope"></i>
-          </div>
-          <span>Email Me</span>
-          <div class="popup-info">anasmapvt@gmail.com</div>
-        </div>
-      </a>
-    </div>
-    <div class="location">
-      <div class="location-icon">
-        <i class="bi bi-geo-alt"></i>
-      </div>
-      <span>Kerala, India</span>
-    </div>
-    <div class="copyright">
-      <p>© Copyright <strong>Muhammed Anas M A</strong> All Rights Reserved</p>
-      <p>Designed by <span>Anas</span></p>
-    </div>
-  </div>
-</section><!-- /Contact Section -->
+      </section><!-- /Contact Section -->
 
   </main>
 
