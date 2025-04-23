@@ -171,6 +171,9 @@
 
 
 
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const themeToggle = document.getElementById('theme-toggle');
   const certificateToggle = document.getElementById('certificate-toggle');
@@ -178,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const scrollContainer = document.querySelector('.scrollable-container');
   const scrollLeftBtn = document.querySelector('.scroll-button.left');
   const scrollRightBtn = document.querySelector('.scroll-button.right');
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('.navmenu ul');
 
   // Set default dark mode
   if (!localStorage.getItem('theme')) {
@@ -195,6 +200,51 @@ document.addEventListener('DOMContentLoaded', function() {
   themeToggle?.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    // Force update for About section
+    const aboutSection = document.querySelector('.about');
+    if (document.body.classList.contains('dark-mode')) {
+      aboutSection?.classList.add('dark-mode');
+    } else {
+      aboutSection?.classList.remove('dark-mode');
+    }
+  });
+
+  // Mobile nav toggle
+  mobileNavToggle?.addEventListener('click', () => {
+    if (navMenu.classList.contains('active')) {
+      // Close the menu
+      navMenu.classList.add('closing');
+      mobileNavToggle.classList.remove('active');
+      mobileNavToggle.classList.remove('bi-x');
+      mobileNavToggle.classList.add('bi-list');
+      document.body.classList.remove('mobile-nav-active');
+      setTimeout(() => {
+        navMenu.classList.remove('active', 'closing');
+      }, 400); // Match CSS animation duration
+    } else {
+      // Open the menu
+      navMenu.classList.add('active');
+      mobileNavToggle.classList.add('active');
+      mobileNavToggle.classList.remove('bi-list');
+      mobileNavToggle.classList.add('bi-x');
+      document.body.classList.add('mobile-nav-active');
+    }
+  });
+
+  // Close mobile nav when clicking a link
+  navMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('active')) {
+        navMenu.classList.add('closing');
+        mobileNavToggle.classList.remove('active');
+        mobileNavToggle.classList.remove('bi-x');
+        mobileNavToggle.classList.add('bi-list');
+        document.body.classList.remove('mobile-nav-active');
+        setTimeout(() => {
+          navMenu.classList.remove('active', 'closing');
+        }, 400);
+      }
+    });
   });
 
   // Certificate toggle
