@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Starter Page - eStartup Bootstrap Template</title>
+  <title>Projects - eStartup Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -25,52 +25,29 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Projects Page Specific CSS -->
+  <link href="assets/css/projects.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: eStartup
-  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<body class="starter-page-page">
+<body class="projects-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename"><span>e</span>Startup</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#certificates">certificates</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="index.html#projects" class="active">Projects</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -86,8 +63,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Starter Page</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1>Projects</h1>
+              <p class="mb-0">Explore our diverse range of projects, from ongoing initiatives to completed works. Filter by status to see the progress of each project.</p>
             </div>
           </div>
         </div>
@@ -96,33 +73,164 @@
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Starter Page</li>
+            <li class="current">Projects</li>
           </ol>
         </div>
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Starter Section</h2>
-        <div><span>Check Our</span> <span class="description-title">Starter Section</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+        <h2>Projects</h2>
+        <div><span>Explore</span> <span class="description-title">My Work</span></div>
       </div>
 
-    </section><!-- /Starter Section Section -->
+      <div class="container projects-container" data-aos="fade-up">
+        <!-- Navigation Menu for Filtering -->
+        <nav class="project-nav">
+          <ul>
+            <li><a href="#" class="filter-btn active" data-filter="all">All</a></li>
+            <li><a href="#" class="filter-btn" data-filter="on-progress">On Progress</a></li>
+            <li><a href="#" class="filter-btn" data-filter="completed">Completed</a></li>
+            <li><a href="#" class="filter-btn" data-filter="ongoing">Ongoing</a></li>
+          </ul>
+        </nav>
 
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          <!-- Calculator Project -->
+          <div class="project-item" data-status="completed">
+            <div class="project-image-carousel">
+              <div class="carousel-images">
+                <img src="assets/img/calac1.png" alt="Calculator 1">
+                <img src="assets/img/calc2.png" alt="Calculator 2">
+                <img src="assets/img/calc3.png" alt="Calculator 3">
+                <img src="assets/img/calc4.png" alt="Calculator 4">
+                <img src="assets/img/calc7.png" alt="Calculator 5">
+              </div>
+              <button class="carousel-prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="carousel-next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <h3>Calculator</h3>
+            <button class="details-btn">Click for More Details</button>
+            <!-- Hidden details for modal population -->
+            <div class="project-details" style="display: none;">
+              <p class="description"><strong>Description:</strong> This project is a fully functional calculator application designed to handle both basic and advanced mathematical operations. It supports addition, subtraction, multiplication, division, as well as scientific functions like square root, trigonometry (sine, cosine, tangent), and logarithms. The calculator features a clean, user-friendly interface with a responsive design, ensuring it works seamlessly on both desktop and mobile devices. The project was built to enhance my skills in JavaScript event handling and DOM manipulation, focusing on creating a smooth user experience with real-time calculations.</p>
+              <p><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+              <p><strong>Technologies:</strong> Vanilla JS, DOM Manipulation</p>
+              <p><strong>Purpose:</strong> Frontend</p>
+              <p><strong>Duration:</strong> 2 weeks</p>
+              <p><strong>Challenges:</strong> Implementing scientific functions accurately and ensuring the responsive design adapts to various screen sizes without breaking the layout. Handling edge cases like division by zero and managing state for continuous calculations were also significant hurdles.</p>
+              <p><strong>Status:</strong> Completed</p>
+              <p><strong>Code:</strong> <a href="https://github.com/Anasma123/Projects-/tree/main/calculator" target="_blank">View Code on GitHub</a></p>
+              <p><strong>View:</strong> <a href="https://anasma123.github.io/Projects-/calculator/" target="_blank">Live Demo</a></p>
+            </div>
+          </div>
+          <!-- Task Management API -->
+          <div class="project-item" data-status="ongoing">
+            <div class="project-image-carousel">
+              <div class="carousel-images">
+                <img src="assets/img/project2-1.jpg" alt="Task API 1">
+                <img src="assets/img/project2-2.jpg" alt="Task API 2">
+              </div>
+              <button class="carousel-prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="carousel-next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <h3>Task Management API</h3>
+            <button class="details-btn">Click for More Details</button>
+            <!-- Hidden details for modal population -->
+            <div class="project-details" style="display: none;">
+              <p class="description"><strong>Description:</strong> The Task Management API is a RESTful backend service designed to power a task management application. It allows users to create, read, update, and delete tasks, as well as manage task categories, deadlines, and priorities. The API supports user authentication using JWT (JSON Web Tokens) to ensure secure access to user-specific data. It integrates with MongoDB for persistent storage, utilizing Mongoose for schema validation and efficient querying. The project aims to provide a scalable backend solution that can be integrated with various frontend applications, offering features like task filtering, sorting, and pagination to enhance usability.</p>
+              <p><strong>Languages:</strong> Node.js, Express, MongoDB</p>
+              <p><strong>Technologies:</strong> REST API, JWT Authentication, Mongoose</p>
+              <p><strong>Purpose:</strong> Backend</p>
+              <p><strong>Duration:</strong> 1 month</p>
+              <p><strong>Challenges:</strong> Ensuring secure authentication and authorization mechanisms to protect user data, optimizing database queries for large datasets, and implementing proper error handling for a robust API. Another challenge was setting up CORS to allow cross-origin requests from frontend applications securely.</p>
+              <p><strong>Status:</strong> Ongoing</p>
+              <p><strong>Code:</strong> <a href="https://github.com/project2" target="_blank">View Code on GitHub</a></p>
+              <p><strong>View:</strong> <a href="https://project2-api.com" target="_blank">API Docs</a></p>
+            </div>
+          </div>
+          <!-- Fitness Tracking App -->
+          <div class="project-item" data-status="on-progress">
+            <div class="project-image-carousel">
+              <div class="carousel-images">
+                <img src="assets/img/project3-1.jpg" alt="Fitness App 1">
+                <img src="assets/img/project3-2.jpg" alt="Fitness App 2">
+                <img src="assets/img/project3-3.jpg" alt="Fitness App 3">
+              </div>
+              <button class="carousel-prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="carousel-next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <h3>Fitness Tracking App</h3>
+            <button class="details-btn">Click for More Details</button>
+            <!-- Hidden details for modal population -->
+            <div class="project-details" style="display: none;">
+              <p class="description"><strong>Description:</strong> The Fitness Tracking App is a mobile application built to help users track their fitness activities, set goals, and monitor progress over time. The app allows users to log workouts (e.g., running, cycling, weightlifting), track calories burned, and set daily step goals. It integrates with Google Fit API to sync fitness data from wearable devices and uses Firebase for real-time data storage and user authentication. The app features a dashboard with visual charts to display progress, a workout planner with reminders, and a social feature to share achievements with friends. The goal is to create an all-in-one fitness solution that motivates users to stay active and achieve their fitness goals.</p>
+              <p><strong>Languages:</strong> Flutter, Dart</p>
+              <p><strong>Technologies:</strong> Firebase, Google Fit API, Charts</p>
+              <p><strong>Purpose:</strong> Frontend & Backend</p>
+              <p><strong>Duration:</strong> 3 months</p>
+              <p><strong>Challenges:</strong> Integrating with the Google Fit API to fetch accurate fitness data, optimizing the app for performance on low-end devices, and ensuring real-time synchronization with Firebase without excessive battery drain. Designing an intuitive UI that caters to both beginners and advanced users was also a significant challenge.</p>
+              <p><strong>Status:</strong> On Progress</p>
+              <p><strong>Code:</strong> <a href="https://github.com/project3" target="_blank">View Code on GitHub</a></p>
+              <p><strong>View:</strong> <a href="https://project3-prototype.com" target="_blank">Prototype</a></p>
+            </div>
+          </div>
+          <!-- Portfolio Website -->
+          <div class="project-item" data-status="completed">
+            <div class="project-image-carousel">
+              <div class="carousel-images">
+                <img src="assets/img/p1.png" alt="Portfolio 1">
+                <img src="assets/img/p2.png" alt="Portfolio 2">
+                <img src="assets/img/p3.png" alt="Portfolio 3">
+                <img src="assets/img/p4.png" alt="Portfolio 4">
+              </div>
+              <button class="carousel-prev"><i class="bi bi-chevron-left"></i></button>
+              <button class="carousel-next"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <h3>Portfolio Website</h3>
+            <button class="details-btn">Click for More Details</button>
+            <!-- Hidden details for modal population -->
+            <div class="project-details" style="display: none;">
+              <p class="description"><strong>Description:</strong> The Portfolio Website is a personal showcase of my projects, skills, and experiences as a developer. The website features a modern, responsive design with sections for projects, about me, services, and contact information. It includes smooth animations using AOS (Animate On Scroll) library to enhance the user experience, a dark mode toggle for accessibility, and a contact form integrated with a third-party service for email submissions. The portfolio is optimized for performance, with lazy-loaded images and minified CSS/JS files to ensure fast loading times. The goal was to create a professional online presence that effectively highlights my work and attracts potential clients or employers.</p>
+              <p><strong>Languages:</strong> HTML, CSS, JavaScript</p>
+              <p><strong>Technologies:</strong> Bootstrap, AOS Animations, EmailJS</p>
+              <p><strong>Purpose:</strong> Frontend</p>
+              <p><strong>Duration:</strong> 3 weeks</p>
+              <p><strong>Challenges:</strong> Creating a responsive design that looks great on all devices, implementing smooth scroll animations without affecting performance, and ensuring the contact form works reliably across different email providers. Balancing aesthetics with functionality was also a key challenge.</p>
+              <p><strong>Status:</strong> Completed</p>
+              <!-- <p><strong>Code:</strong> <a href="https://github.com/portfolio" target="_blank">View Code on GitHub</a></p> -->
+              <p><strong>View:</strong> <a href="https://anasma123.github.io/Portfolio/" target="_blank">Live Demo</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="show-more" style="align-items: center;">
+          <a href="#" class="btn">Show More</a>
+        </div>
+      </div>
+    </section><!-- End Projects Section -->
+
+    <!-- Modal for Project Details -->
+    <div class="project-modal" id="projectModal">
+      <div class="modal-content">
+        <span class="modal-close">×</span>
+        <h3 class="modal-title animate-slide-in"></h3>
+        <div class="modal-image-grid animate-slide-in"></div>
+        <div class="modal-details">
+          <div class="modal-description animate-slide-in"></div>
+          <div class="modal-info animate-slide-in"></div>
+          <div class="modal-links animate-slide-in"></div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <footer id="footer" class="footer light-background">
-
     <div class="container">
-      <div class="copyright text-center ">
+      <div class="copyright text-center">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">eStartup</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
@@ -132,14 +240,9 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
@@ -156,6 +259,8 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <!-- Projects Page Specific JS -->
+  <script src="assets/js/projects.js"></script>
 
 </body>
 
