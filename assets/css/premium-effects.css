@@ -1,0 +1,419 @@
+/**
+ * Premium Visual Effects & Enhancements
+ * Professional portfolio styling additions
+ */
+
+/* ============================================
+   PREMIUM ANIMATIONS & EFFECTS
+   ============================================ */
+
+/* Particle Background Effect */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(113, 197, 93, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, rgba(113, 197, 93, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px;
+  pointer-events: none;
+  opacity: 0.6;
+  animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 50px 50px, 80px 80px; }
+}
+
+/* Icon Box Premium Effects */
+.hero .icon-box {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.hero .icon-box::before {
+  background: linear-gradient(90deg, #71c55d, #4CAF50, #45a049);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.hero .icon-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(113, 197, 93, 0.15), transparent);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: -1;
+}
+
+.hero .icon-box:hover::after {
+  width: 400px;
+  height: 400px;
+}
+
+.hero .icon-box:hover {
+  transform: translateY(-10px) rotateX(5deg);
+}
+
+/* About Section Premium Cards */
+.about-box {
+  position: relative;
+  overflow: visible;
+}
+
+.about-box::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(45deg, transparent, rgba(113, 197, 93, 0.1), transparent);
+  border-radius: 28px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: shimmer 3s linear infinite;
+  background-size: 200% auto;
+}
+
+.about-box:hover::after {
+  opacity: 1;
+}
+
+/* Service Cards Enhanced */
+.service-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(113, 197, 93, 0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 16px;
+}
+
+.service-card:hover::after {
+  opacity: 1;
+  animation: shimmer 2s linear infinite;
+  background-size: 200% auto;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) rotateX(3deg);
+}
+
+/* Certificate Badge Effect */
+.certificates .certificate-item {
+  transform-style: preserve-3d;
+}
+
+.certificates .certificate-item h3 {
+  position: relative;
+}
+
+.certificates .certificate-item h3::before {
+  content: '🏆';
+  position: absolute;
+  left: -30px;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.certificates .certificate-item:hover h3::before {
+  opacity: 1;
+  transform: scale(1) rotate(15deg);
+}
+
+/* Social Cards 3D Effect */
+.contact .social-card {
+  perspective: 1000px;
+}
+
+.contact .social-card-inner {
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact .social-card:hover .social-card-inner {
+  transform: translateY(-8px) rotateX(10deg) rotateY(5deg);
+  box-shadow: 
+    0 15px 35px rgba(113, 197, 93, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Glowing Button Effect */
+.btn,
+.cta-button,
+.certificate-toggle {
+  position: relative;
+}
+
+.btn::after,
+.cta-button::after,
+.certificate-toggle::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg, #71c55d, #4CAF50, #71c55d);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn:hover::after,
+.cta-button:hover::after,
+.certificate-toggle:hover::after {
+  opacity: 1;
+  animation: shimmer 2s linear infinite;
+  background-size: 200% auto;
+}
+
+/* Scroll Indicator */
+.hero::before {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid var(--accent-color);
+  border-radius: 25px;
+  z-index: 10;
+  opacity: 0.6;
+}
+
+.hero::before::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0%, 100% { opacity: 0; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(20px); }
+}
+
+/* Image Hover Effects */
+.project-image,
+.certificate-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image::before,
+.certificate-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+}
+
+.project-item:hover .project-image::before,
+.certificate-item:hover .certificate-image::before {
+  opacity: 1;
+  left: 100%;
+}
+
+/* Loading Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Gradient Text Animations */
+.accent-gradient {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-gradient::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #71c55d, #4CAF50, #45a049);
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+  border-radius: 2px;
+}
+
+/* Ripple Effect on Click */
+.btn,
+.cta-button,
+.project-item,
+.certificate-item,
+.social-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: rippleEffect 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Skill Progress Bars */
+.skill-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-box::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #71c55d, #4CAF50);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-box:hover::before {
+  width: 100%;
+}
+
+/* Section Dividers */
+section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  border-radius: 2px;
+}
+
+/* Floating Action Button Style */
+.scroll-top {
+  animation: float 3s ease-in-out infinite;
+}
+
+.scroll-top:hover {
+  animation: none;
+}
+
+/* Card Stack Effect */
+.projects-grid,
+.services-grid {
+  perspective: 1000px;
+}
+
+.project-item,
+.service-card {
+  transform-style: preserve-3d;
+}
+
+/* Text Reveal Animation */
+.hero-title,
+.about-title,
+.section-title h2 {
+  background: linear-gradient(to right, var(--heading-color) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textReveal 0.8s ease-out forwards;
+}
+
+@keyframes textReveal {
+  to {
+    background-position: 0%;
+  }
+}
+
+/* Responsive Premium Effects */
+@media (max-width: 768px) {
+  .hero::after {
+    background-size: 30px 30px, 50px 50px;
+  }
+  
+  .hero .icon-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card:hover,
+  .contact .social-card:hover .social-card-inner {
+    transform: translateY(-4px);
+  }
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .hero::after {
+  opacity: 0.3;
+}
+
+body.dark-mode .project-image::before,
+body.dark-mode .certificate-image::before {
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(113, 197, 93, 0.1) 50%,
+    transparent 70%
+  );
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
