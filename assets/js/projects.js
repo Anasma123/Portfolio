@@ -80,6 +80,44 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalLinks = modal.querySelector('.modal-links');
   const modalClose = modal.querySelector('.modal-close');
 
+  // Create full-screen image viewer (reused)
+  let fullViewer = null;
+  function createFullViewer() {
+    fullViewer = document.createElement('div');
+    fullViewer.className = 'full-image-viewer';
+    fullViewer.innerHTML = `
+      <div class="viewer-backdrop"></div>
+      <div class="viewer-content">
+        <button class="viewer-close" aria-label="Close image">×</button>
+        <img class="viewer-img" src="" alt="">
+      </div>
+    `;
+    document.body.appendChild(fullViewer);
+
+    // Handlers
+    const closeBtn = fullViewer.querySelector('.viewer-close');
+    const backdrop = fullViewer.querySelector('.viewer-backdrop');
+
+    function closeViewer() {
+      fullViewer.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeViewer();
+    });
+
+    backdrop.addEventListener('click', closeViewer);
+
+    // ESC to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && fullViewer.classList.contains('active')) {
+        closeViewer();
+      }
+    });
+  }
+
   projectItems.forEach(item => {
     const detailsBtn = item.querySelector('.details-btn');
     detailsBtn.addEventListener('click', (e) => {
@@ -101,6 +139,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Populate image grid
       modalImageGrid.innerHTML = images.map(src => `<img src="${src}" alt="${title}">`).join('');
+
+      // Ensure full viewer exists
+      if (!fullViewer) createFullViewer();
+
+      // Add click listeners for each modal image to open full-screen viewer
+      const modalImgs = modalImageGrid.querySelectorAll('img');
+      modalImgs.forEach(imgEl => {
+        imgEl.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const viewerImg = fullViewer.querySelector('.viewer-img');
+          viewerImg.src = imgEl.src;
+          viewerImg.alt = imgEl.alt || title;
+          fullViewer.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
 
       // Extract info (exclude description, code, and view links)
       const detailsClone = detailsElement.cloneNode(true);
